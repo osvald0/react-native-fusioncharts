@@ -4,17 +4,18 @@ import ReactNativeFusionCharts from './src/FusionCharts';
 
 const App = (props) => {
   const {
-    type, 
-    width, 
-    height, 
-    dataSource, 
-    dataFormat, 
-    dataJson, 
-    schemaJson
+    type,
+    width,
+    height,
+    dataSource,
+    dataFormat,
+    dataJson,
+    schemaJson,
+    containerProps
   } = props.chartConfig;
 
   return (
-    <ScrollView>
+    <ScrollView {...containerProps}>
       <ReactNativeFusionCharts
         type={type}
         width={width}
